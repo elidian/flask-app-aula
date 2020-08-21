@@ -34,7 +34,7 @@ def get_student_id(student_id):
 def create_json_student():
     data = request.get_json()
 
-    data['id'] = len(students)+1
+    data['id'] = len(students) + 1
     students.append(data)
 
     return jsonify({'id': data['id'], 'name': data['name'], 'age': data['age'], 'email': data['email']})
@@ -50,11 +50,23 @@ def put_student():
             for inf in data:
                 if data[inf] != student[inf]:
                     student[inf] = data[inf]
-                    
+
             return jsonify({'Student': student})
     return jsonify({'Student': None})
 # END METHODS PUT
-
+    
+# BEGIN METHOD DELETE
+@app.route('/api/student/<int:student_id>', methods=['DELETE'])
+def del_student(student_id):
+    cont = 0
+    for student in students:
+        if student['id'] == student_id:
+            msg = jsonify({'Student deleted': student})
+            del(students[cont])
+            return msg
+        cont = cont +1
+    return jsonify({'Student': None})
+# END METHOD DELETE
 
 """
 books = [
