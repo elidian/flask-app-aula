@@ -34,7 +34,13 @@ def get_student_id(student_id):
 def create_json_student():
     data = request.get_json()
 
-    data['id'] = len(students) + 1
+    id_student = 0
+    for student in students:
+        if student['id'] - id_student > 1:
+            pass
+        elif id_student < student['id']:
+            id_student = student['id']
+    data['id'] = id_student + 1
     students.append(data)
 
     return jsonify({'id': data['id'], 'name': data['name'], 'age': data['age'], 'email': data['email']})
