@@ -1,8 +1,8 @@
 # flask-app-aula
-# DEV WEB 2020.1
-# ATIVIDADE COM FLASK 20/AGOSTO/2020
-# Recriem o exemplo apresentado na aula de 20/08/2020, que descreve um exemplo introdutório de uma app em Flask. 
-# Se precisar, use dados fictícios para simular uma base de dados. 
+ DEV WEB 2020.1
+ ATIVIDADE COM FLASK 20/AGOSTO/2020
+ Recriem o exemplo apresentado na aula de 20/08/2020, que descreve um exemplo introdutório de uma app em Flask. 
+ Se precisar, use dados fictícios para simular uma base de dados. 
 # 
 # Use rotas com os diferentes verbos http, por exemplo:
 # 
