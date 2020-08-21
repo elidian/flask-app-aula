@@ -6,7 +6,7 @@ Se precisar, use dados fictícios para simular uma base de dados.
 
 Use rotas com os diferentes verbos http, por exemplo:
 
-@app.route('/api/books', methods=['GET'])    
+@app.route('/api/books', methods=['GET'])
 def get_students():
 ...
 
